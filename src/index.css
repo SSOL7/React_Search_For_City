@@ -5,9 +5,66 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('./pictures/seoul.jpeg') no-repeat center center/cover;
+  position: relative;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-top: 10rem;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5rem;
+  border: none;
+  color: #fff;
+  margin-bottom: 1rem;
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+
+}
+
+.submit-button {
+  width: 14rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  border: none;
+  color: #fff;
+  margin-bottom: 1rem;
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+li {
+  width: 16rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  color: #fff;
+  margin-bottom: 1rem;
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
