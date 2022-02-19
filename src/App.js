@@ -7,14 +7,6 @@ function App() {
 
 const url = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=0G1vgC0oQj18gUyXgyjffHPGMVcf67cS&q=${location}&language=en-us&details=true`;
 
-  // const getData = (event) => {
-  //   console.log(event);
-  //     axios.get(url).then(response => {
-  //       setData(response.data);
-  //       console.log(response.data);
-  //     });
-  // }
-
   const search_location = (event) => {
     event.preventDefault();
     axios.get(url).then((response) => {
