@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import React, { useState } from 'react';
 
@@ -5,6 +6,7 @@ function App() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState('');
   const [weather, setWeather] = useState('');
+  const [weatherData, setWeatherData] = useState({});
 
   
 
@@ -24,25 +26,23 @@ const search_location = (event) => {
 if(!data) {
   return null;
 }
-
-// const search_weather = (event) => {
-  //   event.preventDefault();
-  //   axios.get(weather_url).then((response) => {
-    //     console.log(response.data);
-    //     setWeather(response.data);
-    //     console.log(data);
-    //     })
-    //     setWeather('');
-    // };
     
 const weather_url = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${weather}?apikey=0G1vgC0oQj18gUyXgyjffHPGMVcf67cS&metric=true`;
-
   const search_weather = async (event) => {
     event.preventDefault();
-    const response = await fetch(weather_url);
-    const data = await response.json();
-    console.log(data);
+    axios.get(weather_url).then((response) => {
+      console.log(response.data);
+      setWeatherData(response.data);
+      console.log(`${response.data.DailyForecasts[0].Date}`);
+      console.log(`${response.data.DailyForecasts[0].Temperature.Maximum.Value}`);
+      return data[0];
+    })
+    setWeather('');
   };
+
+  if(!weatherData) {
+    return null;
+  }
 
   return (
     <div className="App">
